@@ -44,12 +44,12 @@ else:
 			
 			
 	
-	myDict = {'jan': 1,'Jan': 1,'january': 1,'January': 1,'feb': 2,'Feb': 2,'february': 2,'February': 2,'mar': 3,'Mar': 3,'march': 3,'March': 3,'apr': 4,'Apr': 4,'april': 4,'April': 4,'may': 5,'May': 5,'jun': 6,'Jun': 6,'june': 6,'June': 6,'jul': 7,'Jul': 7,'july': 7,'July': 7,'aug': 8,'Aug': 8,'august': 8, 'August': 8,'sep': 9,'Sep': 9,'september': 9,'September': 9,'oct': 10,'Oct': 10,'october': 10,'October': 10,'nov': 11,'Nov': 11,'november': 11,'November': 11,'dec' : 12,'Dec': 12,'december': 12,'December': 12}
+	months = ['','jan','feb','mar','apr','may','jun','jul','aug','sep','oct','nov','dec']
 	
-	if month[0] in myDict:
-		month[0] = myDict[month[0]]
-	if month[1] in myDict:
-		month[1] = myDict[month[1]]
+	if month[0][0:3].lower() in months:
+		month[0] = months.index(month[0][0:3].lower())
+	if month[1][0:3].lower() in months:
+		month[1] = months.index(month[1][0:3].lower())
 	
 	month[0] = int(month[0])
 	month[1] = int(month[1])
